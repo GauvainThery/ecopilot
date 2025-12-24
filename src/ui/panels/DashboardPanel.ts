@@ -36,10 +36,7 @@ export class DashboardPanel implements vscode.Disposable {
       {
         enableScripts: true,
         retainContextWhenHidden: true,
-        localResourceRoots: [
-          vscode.Uri.joinPath(this.extensionUri, 'dist'),
-          vscode.Uri.joinPath(this.extensionUri, 'src', 'ui', 'panels', 'dashboard'),
-        ],
+        localResourceRoots: [vscode.Uri.joinPath(this.extensionUri, 'dist')],
       }
     );
 
@@ -170,20 +167,14 @@ export class DashboardPanel implements vscode.Disposable {
    * Generate HTML content for the webview
    */
   private getHtmlContent(webview: vscode.Webview): string {
-    const dashboardPath = vscode.Uri.joinPath(
-      this.extensionUri,
-      'src',
-      'ui',
-      'panels',
-      'dashboard'
-    );
+    const distPath = vscode.Uri.joinPath(this.extensionUri, 'dist');
 
-    const htmlPath = vscode.Uri.joinPath(dashboardPath, 'dashboard.html');
+    const htmlPath = vscode.Uri.joinPath(distPath, 'dashboard.html');
     let html = fs.readFileSync(htmlPath.fsPath, 'utf8');
 
     // Convert resource URIs
-    const stylesUri = webview.asWebviewUri(vscode.Uri.joinPath(dashboardPath, 'styles.css'));
-    const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(dashboardPath, 'dashboard.js'));
+    const stylesUri = webview.asWebviewUri(vscode.Uri.joinPath(distPath, 'styles.css'));
+    const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(distPath, 'dashboard.js'));
 
     // Replace paths in HTML
     html = html.replace('styles.css', stylesUri.toString());
