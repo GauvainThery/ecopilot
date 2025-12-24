@@ -18,4 +18,4 @@ By making the environmental cost of AI visible, EcoPilot helps developers make i
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE.md) file for details.
