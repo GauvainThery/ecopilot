@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoPilot Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-title">
+        <h1>🌱 EcoPilot Dashboard</h1>
+        <p>Track your AI environmental impact in real-time</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn" id="refresh-btn">🔄 Refresh</button>
+        <button class="btn btn-destructive" id="reset-session-btn">Reset Session</button>
+        <button class="btn btn-destructive" id="reset-all-btn">Reset All</button>
+      </div>
+    </header>
+
+    <!-- Metrics Grid -->
+    <div class="metrics-grid" id="metrics-grid">
+      <!-- Metrics will be injected here -->
+    </div>
+
+    <!-- Impact Breakdown -->
+    <section class="activity-section">
+      <h2 class="section-title">Impact Breakdown</h2>
+      <div class="breakdown-grid" id="breakdown-grid">
+        <!-- Breakdown will be injected here -->
+      </div>
+    </section>
+
+    <!-- Environmental Equivalents -->
+    <section class="activity-section">
+      <h2 class="section-title">Environmental Equivalents</h2>
+      <div class="equivalents-grid" id="equivalents-grid">
+        <!-- Equivalents will be injected here -->
+      </div>
+    </section>
+
+    <!-- Activity Table -->
+    <section class="activity-section">
+      <h2 class="section-title">Recent Activity</h2>
+      <div class="card">
+        <div class="table-container">
+          <table id="activity-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Model</th>
+                <th>Tokens</th>
+                <th>Energy (Wh)</th>
+                <th>CO₂ (g)</th>
+                <th>PE (MJ)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows will be injected here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Box -->
+    <div class="info-box">
+      <strong>💡 Did you know?</strong> The environmental impact shown here is calculated using the 
+      <a href="https://ecologits.ai" target="_blank">EcoLogits</a> methodology, which provides 
+      estimates based on model architecture, hardware, and energy sources.
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

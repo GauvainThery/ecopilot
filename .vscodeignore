@@ -1,0 +1,48 @@
+# Source files (keep compiled dist/ only)
+src/**
+tsconfig.json
+webpack.config.js
+biome.json
+
+# Tests
+**/__tests__/**
+**/*.test.ts
+**/*.spec.ts
+jest.config.js
+coverage/
+
+# Build outputs to exclude
+out/**
+
+# Development files
+.vscode/**
+.vscode-test/**
+.git/
+.gitignore
+
+# Node
+node_modules/**
+package-lock.json
+npm-debug.log
+
+# Python
+.venv/**
+venv/**
+__pycache__/**
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Documentation (keep README, LICENSE)
+CONTRIBUTING.md
+.github/
+
+# macOS
+.DS_Store
+
+# Misc
+*.log
+.env
+.env.*
+*.map
