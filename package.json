@@ -5,6 +5,12 @@
   "version": "0.0.1",
   "license": "MIT",
   "publisher": "GauvainThery",
+  "homepage": "https://github.com/GauvainThery/ecopilot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GauvainThery/ecopilot"
+  },
+  "icon": "images/icon.png",
   "keywords": [
     "ai",
     "copilot",
